@@ -1,0 +1,29 @@
+// 引入父主题变量
+@import '_variables.less';
+
+// 之前定义的侧边栏背景色
+@sidebar__background-color: #f4f4f4;
+
+// 新增补充：底部版权区域背景色
+@copyright__background-color: #131921;
+
+// 1. 修改全局最大宽度限制（例如改为 100% 或你希望的最大像素，如 1800px）
+@layout__max-width: 100%; 
+
+// 2. 如果想让左右两侧的内边距（Indentation）也清零，可以把外边距设为 0
+@layout-indent__width: 15px;
+
+// 亚马逊核心配色定义
+@amazon-dark: #131921;         // 顶栏深色背景
+@amazon-dark-light: #232f3e;   // 次级深色
+@amazon-yellow: #ffd814;       // 经典黄色按钮
+@amazon-yellow-hover: #f7ca00; 
+@amazon-orange: #ffa41c;       // 立即购买橙色
+@amazon-link: #044f5c;         // 链接与强调色
+
+// 全局变量覆盖
+@primary__color: @amazon-link;
+@text__color: #0f1111;
+@button__primary__background: @amazon-yellow;
+@button__primary__border-color: #fcd200 #ccb800 #b3a200;
+@button__primary__color: #0f1111;

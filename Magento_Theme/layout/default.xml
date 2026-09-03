@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <!-- 精准控制头部元素的移动与顺序：Logo -> 搜索框 -> 购物车 -> 自定义 User 下拉菜单 -->
+        <!-- 注意：header.content 是 CSS class，不是 Magento 容器名；实际容器名为 header-wrapper -->
+        <move element="top.search" destination="header-wrapper" after="logo"/>
+        <move element="minicart" destination="header-wrapper" after="top.search"/>
+        <referenceBlock name="header.links" remove="true"/>
+        <referenceContainer name="header-wrapper">
+            <block class="Magento\Framework\View\Element\Template" name="user.account.dropdown" template="Magento_Theme::html/account_dropdown.phtml" after="minicart"/>
+        </referenceContainer>
+    </body>
+</page>
