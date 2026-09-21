@@ -1,3 +1,7 @@
+//  Fonts
+@icons__font-path: '@{baseDir}fonts/Luma-Icons';
+@icons__font-name: 'luma-icons';
+
 @amazon-dark: #131921;
 @amazon-dark-light: #232f3e;
 @amazon-sub-menu: #222f3e; 
@@ -5,16 +9,23 @@
 @amazon-orange: #ffa41c;
 @amazon-link: #007185;
 
+
+.checkout-index-index .logo {
+    margin: 0 7px !important;
+}
+@media (min-width: 768px), print {
+    .logo {
+        margin: -28px auto 2px 0 !important;
+    }
+}
+
 body {
     .logo {
-        @media (min-width: 768px) {
-                margin: -18px auto 7px 0 !important;
-            }
-        
         filter: drop-shadow(-2px -2px 10px rgba(255, 255, 255, 1));
         img {
             filter: drop-shadow(-2px 2px 10px rgba(255, 255, 255, 1));
             width: auto !important;
+            margin-left: 5px;
         }
     }
     
@@ -30,13 +41,6 @@ body {
             @media (min-width: 768px) {
                 padding-bottom: 5px !important;
                 padding-top: 5px !important;
-            }
-            .header.links {
-                .customer-welcome{
-                    .action.switch:after {
-                        font-size: 28px !important;
-                    }
-                }
             }
         }
         .header.content {
@@ -80,7 +84,6 @@ body {
                 &:before,
                 .text {
                     color: #d1d1d1 !important;
-                    font-size: 28px !important;
                 }
                 .active:before {
                     color: #fff !important;
@@ -202,8 +205,6 @@ body {
                                 color: #d1d1d1 !important;
                                 right: 12px !important;
                                 top: 3px !important;
-                                font-weight: 700;
-                                font-size: 28px;
                             }
 
                             > a:hover,
@@ -290,11 +291,61 @@ body {
     font-weight: 500 !important;
 }
 
+
+.product-item {
+    margin-bottom: 5px !important;
+}
 .product-item-info {
     border: 1px solid #e7e7e7;
     padding: 10px 0px;
     &:hover {
         box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+}
+.page-products .product-item-info {
+        width: 100%;
+        text-align: center;
+}
+
+.products-list .product-item-details {
+    padding: 15px 15px !important;
+}
+
+// 优化产品列表页标题溢出显示，兼顾 SEO 与 UI 视觉对齐
+.products-grid, .products-list {
+    .product-item-name {
+        a {
+            display: -webkit-box;
+            -webkit-line-clamp: 3; /* 限制 2 行 */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            word-break: break-word;
+            line-height: 1.3em;
+            height: 3.9em; /* 锁定容器高度，防止高度差异导致的卡片错位 */
+        }
+    }
+}
+
+.block-compare .product-item .product-item-name {
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* 限制 2 行 */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+    line-height: 1.3em;
+    height: 3.9em; /* 锁定容器高度，防止高度差异导致的卡片错位 */
+}
+
+.product.media {
+    @media (min-width: 768px) {
+        width: 40% !important;
+    }
+}
+.product-info-main {
+    @media (min-width: 768px) {
+        width: 57% !important;
     }
 }
 
@@ -311,6 +362,10 @@ body {
         .minicart-wrapper {
             padding-right: 10px !important;
         }
+    }
+    .action-auth-toggle {
+        color: #d1d1d1 !important;
+        font-weight: 700 !important;
     }
     .page-products .product-item-info {
         width: 100%;
