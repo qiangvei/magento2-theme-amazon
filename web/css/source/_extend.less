@@ -9,13 +9,26 @@
 @amazon-orange: #ffa41c;
 @amazon-link: #007185;
 
-
+.opc-wrapper {
+    @media (max-width: 767px) {
+        width: 100% !important;
+    }
+    @media (min-width: 768px) {
+        width: 66.66% !important;
+    }
+}
 .checkout-index-index .logo {
     margin: 0 7px !important;
 }
 @media (min-width: 768px), print {
     .logo {
         margin: -28px auto 2px 0 !important;
+    }
+}
+
+[class^='multishipping-'] {
+    .logo {
+        margin: 0 0 !important;
     }
 }
 
@@ -74,7 +87,9 @@ body {
         }
         .minicart-wrapper {
             .block-minicart {
-                right: 7px !important;
+                @media (max-width: 767px) {
+                    right: 7px !important;
+                }
             }
             .action.showcart {
                 background-color: transparent !important;
@@ -97,6 +112,12 @@ body {
                     color: #111 !important;
                     font-family: Arial, sans-serif;
                     }
+            }
+            .product .actions {
+                @media (max-width: 767px) {
+                    float: right;
+                    margin: -28px 0 0;
+                }
             }
         }
         
@@ -384,4 +405,44 @@ body {
             }
         }
     }    
+}
+
+.breadcrumbs .item:not(:last-child):after {
+    font-size: 10px !important;
+}
+
+.rating-summary .rating-result:before {
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    -webkit-font-smoothing: antialiased;
+    color: #c7c7c7;
+    font-family: 'luma-icons';
+    font-size: 16px;
+    height: 16px;
+    letter-spacing: 2px;
+    line-height: 16px;
+    content: '\e605' '\e605' '\e605' '\e605' '\e605';
+    display: block;
+    font-style: normal;
+    font-weight: 400;
+    speak: none;
+}
+.rating-summary .rating-result>span:before {
+    position: relative;
+    z-index: 2;
+    -webkit-font-smoothing: antialiased;
+    color: #ff5501;
+    font-family: 'luma-icons';
+    font-size: 16px;
+    height: 16px;
+    letter-spacing: 2px;
+    line-height: 16px;
+    content: '\e605' '\e605' '\e605' '\e605' '\e605';
+    display: block;
+    font-style: normal;
+    font-weight: 400;
+    speak: none;
 }
