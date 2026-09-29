@@ -1,5 +1,5 @@
 {
-  "name": "wei/theme-amazon",
+  "name": "qiangvei/theme-amazon",
   "description": "Amazon style theme for Magento 2.4",
   "type": "magento2-theme",
   "version": "1.0.0",
@@ -19,7 +19,7 @@
   },
   "extra": {
         "map": {
-            "wei/theme-amazon": "app/design/frontend/Wei/amazon"
+            "qiangvei/theme-amazon": "app/design/frontend/qiangvei/amazon"
         }
     }
 }
