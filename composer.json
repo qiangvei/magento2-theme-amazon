@@ -8,18 +8,12 @@
       "AFL-3.0"
   ],
   "require": {
-        "php": "~8.4",
-        "composer/installers": "~2.0",
+        "php": "~8.3 || ~8.4 || ~8.5",
         "magento/theme-frontend-luma": "^100.4"
     },
   "autoload": {
     "files": [
       "registration.php"
     ]
-  },
-  "extra": {
-        "map": {
-            "qiangvei/magento2-theme-amazon": "app/design/frontend/qiangvei/amazon"
-        }
-    }
+  }
 }
